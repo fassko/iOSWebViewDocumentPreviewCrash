@@ -61,9 +61,9 @@ extension WKWebViewController: FileDownloaderDelegate {
     print(Thread.isMainThread)
     print(Thread.current)
     
-    DispatchQueue.main.async {
+//    DispatchQueue.main.async {
       self.showDocumentPreview(url: url)
-    }
+//    }
   }
   
   func failed(error: Error) {

@@ -48,9 +48,13 @@ extension UIWebViewController: UIWebViewDelegate {
 
 extension UIWebViewController: FileDownloaderDelegate {
   func fileDownloaded(url: URL) {
-//    DispatchQueue.main.async {
+    
+    print(Thread.isMainThread)
+    print(Thread.current)
+    
+    DispatchQueue.main.async {
       self.showDocumentPreview(url: url)
-//    }
+    }
   }
   
   func failed(error: Error) {
