@@ -1,0 +1,514 @@
+objc[71690]: Class VCWeakObjectHolder is implemented in both /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AVConference.framework/Frameworks/ViceroyTrace.framework/ViceroyTrace (0x1239f14d0) and /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AVConference.framework/AVConference (0x122b23e38). One of the two will be used. Which one is undefined.
+false
+<NSThread: 0x60000046f340>{number = 4, name = (null)}
+2018-05-30 11:00:52.164836+0200 TestPreview[71690:9068154] [AXRun-PID] Client requesting unsuspension of PID:71725 Name:<redacted>
+2018-05-30 11:00:53.201499+0200 TestPreview[71690:9068154] [AXRun-PID] Client requesting unsuspension of PID:71725 Name:<redacted>
+2018-05-30 11:00:53.263655+0200 TestPreview[71690:9058310] [MC] System group container for systemgroup.com.apple.configurationprofiles path is /Users/kristaps/Library/Developer/CoreSimulator/Devices/75C3DCBC-8AEB-405C-B1BE-9B4E3ABFEDC1/data/Containers/Shared/SystemGroup/systemgroup.com.apple.configurationprofiles
+2018-05-30 11:00:53.264772+0200 TestPreview[71690:9058310] [MC] Reading from private effective user settings.
+2018-05-30 11:00:56.191841+0200 TestPreview[71690:9058310] [Accessibility] WKContentView[@] set up: @ pid: @ MACH_PORT -721337344
+false
+<NSThread: 0x60000046f340>{number = 4, name = (null)}
+2018-05-30 11:00:56.704201+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021ad4ff -[UIView(Hierarchy) layoutBelowIfNeeded] + 264
+	5   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	6   UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	7   UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	8   UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	9   UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	10  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	11  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	12  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	13  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	14  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	15  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	16  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	17  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	18  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	19  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	20  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	21  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	22  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	23  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	24  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	25  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	26  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	27  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	28  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	29  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	30  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	31  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	32  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	33  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	34  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	35  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	36  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	37  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	38  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	39  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	40  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	41  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	42  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	43  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	44  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	45  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	46  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	47  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	48  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	49  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	50  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	53  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	54  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	55  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	56  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	57  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.710282+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021ad9c6 -[UIView(Hierarchy) layoutBelowIfNeeded] + 1487
+	5   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	6   UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	7   UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	8   UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	9   UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	10  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	11  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	12  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	13  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	14  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	15  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	16  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	17  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	18  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	19  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	20  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	21  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	22  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	23  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	24  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	25  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	26  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	27  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	28  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	29  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	30  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	31  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	32  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	33  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	34  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	35  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	36  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	37  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	38  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	39  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	40  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	41  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	42  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	43  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	44  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	45  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	46  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	47  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	48  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	49  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	50  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	53  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	54  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	55  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	56  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	57  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.716292+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021aec17 -[UIView(Hierarchy) layoutSubviews] + 272
+	5   UIKit                               0x00000001021c3808 -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 1515
+	6   QuartzCore                          0x00000001094b861a -[CALayer layoutSublayers] + 177
+	7   QuartzCore                          0x00000001094bc82b _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 395
+	8   UIKit                               0x00000001021ad68d -[UIView(Hierarchy) layoutBelowIfNeeded] + 662
+	9   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	10  UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	11  UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	12  UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	13  UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	14  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	15  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	16  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	17  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	18  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	19  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	20  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	21  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	22  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	23  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	24  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	25  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	26  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	27  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	28  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	29  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	30  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	31  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	32  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	33  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	34  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	35  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	36  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	37  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	38  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	39  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	40  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	41  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	42  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	43  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	44  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	45  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	46  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	47  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	48  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	49  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	50  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	53  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	54  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	55  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	56  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	57  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	58  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	59  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	60  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	61  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.721796+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021ae2b3 -[UIView(Hierarchy) _updateConstraintsAsNecessaryAndApplyLayoutFromEngine] + 256
+	5   UIKit                               0x00000001021c3808 -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 1515
+	6   QuartzCore                          0x00000001094b861a -[CALayer layoutSublayers] + 177
+	7   QuartzCore                          0x00000001094bc82b _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 395
+	8   UIKit                               0x00000001021ad68d -[UIView(Hierarchy) layoutBelowIfNeeded] + 662
+	9   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	10  UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	11  UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	12  UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	13  UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	14  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	15  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	16  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	17  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	18  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	19  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	20  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	21  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	22  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	23  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	24  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	25  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	26  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	27  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	28  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	29  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	30  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	31  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	32  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	33  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	34  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	35  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	36  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	37  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	38  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	39  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	40  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	41  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	42  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	43  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	44  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	45  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	46  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	47  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	48  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	49  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	50  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	53  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	54  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	55  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	56  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	57  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	58  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	59  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	60  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	61  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.729860+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021c309e -[UIView(CALayerDelegate) _wantsReapplicationOfAutoLayoutWithLayoutDirtyOnEntry:] + 167
+	5   UIKit                               0x00000001021c3848 -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 1579
+	6   QuartzCore                          0x00000001094b861a -[CALayer layoutSublayers] + 177
+	7   QuartzCore                          0x00000001094bc82b _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 395
+	8   UIKit                               0x00000001021ad68d -[UIView(Hierarchy) layoutBelowIfNeeded] + 662
+	9   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	10  UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	11  UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	12  UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	13  UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	14  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	15  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	16  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	17  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	18  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	19  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	20  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	21  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	22  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	23  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	24  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	25  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	26  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	27  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	28  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	29  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	30  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	31  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	32  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	33  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	34  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	35  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	36  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	37  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	38  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	39  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	40  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	41  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	42  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	43  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	44  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	45  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	46  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	47  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	48  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	49  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	50  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	53  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	54  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	55  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	56  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	57  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	58  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	59  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	60  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	61  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.736239+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021c309e -[UIView(CALayerDelegate) _wantsReapplicationOfAutoLayoutWithLayoutDirtyOnEntry:] + 167
+	5   UIKit                               0x00000001021c3a03 -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 2022
+	6   QuartzCore                          0x00000001094b861a -[CALayer layoutSublayers] + 177
+	7   QuartzCore                          0x00000001094bc82b _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 395
+	8   UIKit                               0x00000001021ad68d -[UIView(Hierarchy) layoutBelowIfNeeded] + 662
+	9   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	10  UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	11  UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	12  UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	13  UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	14  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	15  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	16  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	17  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	18  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	19  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	20  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	21  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	22  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	23  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	24  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	25  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	26  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	27  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	28  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	29  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	30  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	31  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	32  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	33  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	34  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	35  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	36  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	37  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	38  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	39  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	40  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	41  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	42  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	43  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	44  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	45  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	46  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	47  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	48  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	49  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	50  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	51  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	52  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	53  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	54  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	55  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	56  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	57  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	58  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	59  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	60  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	61  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.742139+0200 TestPreview[71690:9068167] This application is modifying the autolayout engine from a background thread after the engine was accessed from the main thread. This can lead to engine corruption and weird crashes.
+ Stack:(
+	0   Foundation                          0x000000010147adf7 _AssertAutolayoutOnAllowedThreadsOnly + 77
+	1   Foundation                          0x000000010147aaba -[NSISEngine _optimizeWithoutRebuilding] + 61
+	2   Foundation                          0x000000010128b639 -[NSISEngine optimize] + 108
+	3   Foundation                          0x000000010147801d -[NSISEngine performPendingChangeNotifications] + 84
+	4   UIKit                               0x00000001021c3b0f -[UIView(CALayerDelegate) layoutSublayersOfLayer:] + 2290
+	5   QuartzCore                          0x00000001094b861a -[CALayer layoutSublayers] + 177
+	6   QuartzCore                          0x00000001094bc82b _ZN2CA5Layer16layout_if_neededEPNS_11TransactionE + 395
+	7   UIKit                               0x00000001021ad68d -[UIView(Hierarchy) layoutBelowIfNeeded] + 662
+	8   UIKit                               0x0000000102d3606c -[UIInputSetHostView layoutIfNeeded] + 104
+	9   UIKit                               0x0000000102d40720 __82-[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:]_block_invoke + 81
+	10  UIKit                               0x00000001021b4bca +[UIView(Animation) performWithoutAnimation:] + 90
+	11  UIKit                               0x0000000102d374ab -[UIInputWindowController performWithoutAppearanceCallbacks:] + 27
+	12  UIKit                               0x0000000102d374d6 -[UIInputWindowController performWithoutCallbacksOrNotifications:] + 34
+	13  UIKit                               0x0000000102d406c4 -[UIInputWindowController updateToPlacement:withNormalAnimationsAndNotifications:] + 197
+	14  UIKit                               0x00000001028ea2a7 -[UIInputViewAnimationControllerBasic prepareAnimationWithHost:startPlacement:endPlacement:] + 33
+	15  UIKit                               0x0000000102d3f2f8 __77-[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:]_block_invoke.1013 + 62
+	16  UIKit                               0x00000001029b1b48 -[_UIRemoteKeyboards ignoreLayoutNotifications:] + 27
+	17  UIKit                               0x0000000102d3ed62 -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1308
+	18  UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	19  UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	20  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	21  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	22  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	23  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	24  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	25  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	26  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	27  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	28  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	29  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	30  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	31  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	32  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	33  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	34  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	35  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	36  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	37  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	38  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	39  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	40  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	41  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	42  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	43  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	44  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	45  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	46  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	47  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	48  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	49  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	50  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	51  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	52  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	53  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	54  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	55  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	56  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	57  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	58  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	59  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	60  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+2018-05-30 11:00:56.744344+0200 TestPreview[71690:9068167] *** Assertion failure in -[UIApplication _cachedSystemAnimationFenceCreatingIfNecessary:], /BuildRoot/Library/Caches/com.apple.xbs/Sources/UIKit_Sim/UIKit-3698.52.10/UIApplication.m:1712
+2018-05-30 11:00:56.758603+0200 TestPreview[71690:9068167] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'accessing _cachedSystemAnimationFence requires the main thread'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0000000105d521e6 __exceptionPreprocess + 294
+	1   libobjc.A.dylib                     0x0000000101858031 objc_exception_throw + 48
+	2   CoreFoundation                      0x0000000105d57472 +[NSException raise:format:arguments:] + 98
+	3   Foundation                          0x00000001012fb652 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 193
+	4   UIKit                               0x00000001020eb4d3 -[UIApplication _cachedSystemAnimationFenceCreatingIfNecessary:] + 358
+	5   UIKit                               0x00000001021751d5 +[UIWindow _synchronizeDrawingWithPreCommitHandler:] + 57
+	6   UIKit                               0x00000001028e9df6 -[UIInputViewAnimationStyle launchAnimation:afterStarted:completion:forHost:fromCurrentPosition:] + 99
+	7   UIKit                               0x0000000102d3eeca -[UIInputWindowController moveFromPlacement:toPlacement:starting:completion:] + 1668
+	8   UIKit                               0x0000000102d47bdf __43-[UIInputWindowController setInputViewSet:]_block_invoke.1494 + 92
+	9   UIKit                               0x0000000102d3750d -[UIInputWindowController performOperations:withTemplateNotificationInfo:] + 46
+	10  UIKit                               0x0000000102d4777a -[UIInputWindowController setInputViewSet:] + 1302
+	11  UIKit                               0x0000000102d3e4a2 -[UIInputWindowController performOperations:withAnimationStyle:] + 50
+	12  UIKit                               0x00000001028e1f25 -[UIPeripheralHost(UIKitInternal) setInputViews:animationStyle:] + 1569
+	13  UIKit                               0x0000000122148128 -[UIPeripheralHostAccessibility setInputViews:animationStyle:] + 75
+	14  UIKit                               0x00000001028d9dac -[UIPeripheralHost(UIKitInternal) _reloadInputViewsForResponder:] + 2137
+	15  UIKit                               0x00000001028e3649 -[UIPeripheralHost(UIKitInternal) _preserveInputViewsWithId:animated:reset:] + 564
+	16  UIKit                               0x00000001022a9b44 -[UIViewController _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 1218
+	17  UIKit                               0x0000000122117228 -[UIViewControllerAccessibility _presentViewController:modalSourceViewController:presentationController:animationController:interactionController:completion:] + 299
+	18  UIKit                               0x00000001022ab864 -[UIViewController _presentViewController:withAnimationController:completion:] + 4602
+	19  UIKit                               0x00000001022ae326 __63-[UIViewController _presentViewController:animated:completion:]_block_invoke + 99
+	20  UIKit                               0x00000001022ae9b8 -[UIViewController _performCoordinatedPresentOrDismiss:animated:] + 511
+	21  UIKit                               0x00000001022ae28c -[UIViewController _presentViewController:animated:completion:] + 169
+	22  UIKit                               0x00000001022ae5d0 -[UIViewController presentViewController:animated:completion:] + 154
+	23  UIKit                               0x000000012211686c -[UIViewControllerAccessibility presentViewController:animated:completion:] + 221
+	24  QuickLook                           0x000000011db087ce -[QLPreviewController presentPreviewItem:onViewController:withDelegate:animated:] + 547
+	25  UIKit                               0x00000001028fd6da -[UIDocumentInteractionController __presentPreviewAnimated:] + 191
+	26  UIKit                               0x0000000122159785 -[UIDocumentInteractionControllerAccessibility presentPreviewAnimated:] + 53
+	27  TestPreview                         0x0000000100f3f898 _T011TestPreview19WKWebViewControllerC012showDocumentB033_C1576190779668A310307AA177A01346LLy10Foundation3URLV3url_tF + 328
+	28  TestPreview                         0x0000000100f3f6dd _T011TestPreview19WKWebViewControllerC14fileDownloadedy10Foundation3URLV3url_tF + 397
+	29  TestPreview                         0x0000000100f3fa59 _T011TestPreview19WKWebViewControllerCAA22FileDownloaderDelegateA2aDP14fileDownloadedy10Foundation3URLV3url_tFTW + 9
+	30  TestPreview                         0x0000000100f3c809 _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_ + 1849
+	31  TestPreview                         0x0000000100f3cbcc _T011TestPreview14FileDownloaderV08downloadC0yyFy10Foundation3URLVSg_So11URLResponseCSgs5Error_pSgtcfU_TA + 12
+	32  TestPreview                         0x0000000100f3cc9b _T010Foundation3URLVSgSo11URLResponseCSgs5Error_pSgIegxxx_So5NSURLCSgAGSo7NSErrorCSgIeyByyy_TR + 203
+	33  CFNetwork                           0x000000010625be52 __85-[__NSURLSessionLocal downloadTaskForRequest:downloadFilePath:resumeData:completion:]_block_invoke + 19
+	34  CFNetwork                           0x0000000106271e86 __50-[__NSCFLocalDownloadTask _private_fileCompletion]_block_invoke.379 + 79
+	35  Foundation                          0x000000010126e363 __NSBLOCKOPERATION_IS_CALLING_OUT_TO_A_BLOCK__ + 7
+	36  Foundation                          0x000000010126e1ca -[NSBlockOperation main] + 68
+	37  Foundation                          0x000000010126c6b2 -[__NSOperationInternal _start:] + 766
+	38  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	39  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	40  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	41  libdispatch.dylib                   0x0000000106eb7e14 _dispatch_block_invoke_direct + 592
+	42  libdispatch.dylib                   0x0000000106eb7ba4 dispatch_block_perform + 109
+	43  Foundation                          0x000000010126875b __NSOQSchedule_f + 337
+	44  libdispatch.dylib                   0x0000000106eb2848 _dispatch_client_callout + 8
+	45  libdispatch.dylib                   0x0000000106eb8b35 _dispatch_continuation_pop + 967
+	46  libdispatch.dylib                   0x0000000106eb6fb0 _dispatch_async_redirect_invoke + 780
+	47  libdispatch.dylib                   0x0000000106ebe3c8 _dispatch_root_queue_drain + 664
+	48  libdispatch.dylib                   0x0000000106ebe0d2 _dispatch_worker_thread3 + 132
+	49  libsystem_pthread.dylib             0x00000001073dd169 _pthread_wqthread + 1387
+	50  libsystem_pthread.dylib             0x00000001073dcbe9 start_wqthread + 13
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+(lldb) 
