@@ -32,3 +32,8 @@ Need to execute **UIDocumentInteractionController** `presentPreview` on main thr
     DispatchQueue.main.async {
       self.showDocumentPreview(url: url)
     }
+    
+    
+## Open radar
+    
+[Radar](https://openradar.appspot.com/radar?id=4998225492705280)
