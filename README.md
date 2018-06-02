@@ -37,3 +37,9 @@ Need to execute **UIDocumentInteractionController** `presentPreview` on main thr
 ## Open radar
     
 [Radar](https://openradar.appspot.com/radar?id=4998225492705280)
+
+## Apple's explanation
+
+> Engineering has provided the following information regarding this issue:
+
+> Your app is trying to use UIDocumentInteractionController from a background thread, directly from a NSURLSession callback, which is not allowed. You need to dispatch_async to the main queue from the NSURLSession callback before doing anything UI-related, including creating and presenting UIDocumentInteractionController.
